@@ -1,10 +1,12 @@
 
 package com.ejemplo.SpringBoot.service;
 
+
 import com.ejemplo.SpringBoot.model.Estudios;
 import com.ejemplo.SpringBoot.repository.EstudiosRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -37,5 +39,14 @@ public class EstudiosService implements IEstudiosService{
     public void modificarEstudios(Estudios estud) {
         estrep.save(estud);
         }
-    
+
+    @Override
+    public List<Estudios> verEtudiosOrdenados() {
+        Sort sortOrder = Sort.by("fechainicEstudios").descending(); 
+ 
+       return estrep.findAll(sortOrder);
+
+    }
 }
+
+   

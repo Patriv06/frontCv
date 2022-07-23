@@ -5,13 +5,12 @@
 package com.ejemplo.SpringBoot.model;
 
 import java.io.Serializable;
+import java.util.Date;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -33,20 +32,26 @@ public class Trabajos implements Serializable {
     private String tipoTrabajo;
     private String redesTrabajo;
     
-    //@ManyToOne(fetch = FetchType.LAZY)
-    //@JoinColumn(name= "idPersona")
-    //private Persona person;
+    @Temporal(javax.persistence.TemporalType.DATE)
+    private Date fechainicTrabajo;
+    
+    @Temporal(javax.persistence.TemporalType.DATE)
+    private Date fechafinTrabajo;
+    
+   
 
     public Trabajos() {
     }
 
-    public Trabajos(Long id, String nombreTrabajo, String puestoTrabajo, String descripcionTrabajo, String tipoTrabajo, String redesTrabajo, Persona person) {
+    public Trabajos(Long id, String nombreTrabajo, String puestoTrabajo, String descripcionTrabajo, String tipoTrabajo, String redesTrabajo, Date fechainicTrabajo, Date fechafinTrabajo ){
         this.id = id;
         this.nombreTrabajo = nombreTrabajo;
         this.puestoTrabajo = puestoTrabajo;
         this.descripcionTrabajo = descripcionTrabajo;
         this.tipoTrabajo = tipoTrabajo;
         this.redesTrabajo = redesTrabajo;
+        this.fechainicTrabajo = fechainicTrabajo;
+        this.fechafinTrabajo = fechafinTrabajo;
      //   this.person = person;
     }
 

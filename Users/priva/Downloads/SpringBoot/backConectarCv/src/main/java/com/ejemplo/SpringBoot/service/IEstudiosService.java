@@ -1,6 +1,7 @@
 
 package com.ejemplo.SpringBoot.service;
 
+
 import com.ejemplo.SpringBoot.model.Estudios;
 import java.util.List;
 
@@ -15,5 +16,7 @@ public interface IEstudiosService {
     public Estudios buscarEstudios(Long id);
     
     public void modificarEstudios(Estudios estud);
+    
+    public List<Estudios> verEtudiosOrdenados();
     
 }

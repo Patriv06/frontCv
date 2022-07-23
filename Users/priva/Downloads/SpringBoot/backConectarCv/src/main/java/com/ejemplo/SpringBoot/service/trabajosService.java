@@ -1,10 +1,13 @@
 
 package com.ejemplo.SpringBoot.service;
 
+
+
 import com.ejemplo.SpringBoot.model.Trabajos;
 import com.ejemplo.SpringBoot.repository.TrabajosRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -37,6 +40,16 @@ public class trabajosService implements ITrabajosService {
                 trabRepo.save(trab);
 
         }
+     @Override
+    public List<Trabajos> verTrabajosOrdenados() {
+        Sort sortOrder = Sort.by("fechainicTrabajos").descending(); 
+ 
+       return trabRepo
+               .findAll(sortOrder);
 
+    }
+
+ 
+    
     
 }

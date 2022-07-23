@@ -16,4 +16,6 @@ public interface ITrabajosService {
     
     public void modifTrabajos(Trabajos trab);
     
+    public List<Trabajos> verTrabajosOrdenados();
+    
 }

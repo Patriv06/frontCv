@@ -1,0 +1,6 @@
+com\ejemplo\SpringBoot\service\PersonaService.class
+com\ejemplo\SpringBoot\Application.class
+com\ejemplo\SpringBoot\model\Persona.class
+com\ejemplo\SpringBoot\service\IPersonaService.class
+com\ejemplo\SpringBoot\controller\Controller.class
+com\ejemplo\SpringBoot\repository\PersonaRepository.class
