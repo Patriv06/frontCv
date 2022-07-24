@@ -12,6 +12,10 @@ import { DatosEstudiosComponent } from './componentes/datos-estudios/datos-estud
 import { GrillaCComponent } from './componentes/grilla-c/grilla-c.component';
 import { DatosTrabajosComponent } from './componentes/datos-trabajos/datos-trabajos.component';
 import { EditarTrabajosComponent } from './componentes/editar-trabajos/editar-trabajos.component';
+import { DatosIdiomasComponent } from './componentes/datos-idiomas/datos-idiomas.component';
+import { EditarIdiomasComponent } from './componentes/editar-idiomas/editar-idiomas.component';
+import { DatosHobbiesComponent } from './componentes/datos-hobbies/datos-hobbies.component';
+import { EditarHobbiesComponent } from './componentes/editar-hobbies/editar-hobbies.component';
 const routes: Routes = [
   {path:'portfolio', component:PortfolioComponent},
   {path:'iniciar-sesion', component:IniciarSesionComponent},
@@ -24,6 +28,10 @@ const routes: Routes = [
   {path:'grilla-c' , component:GrillaCComponent},
   {path:'datos-trabajos', component:DatosTrabajosComponent},
   {path:'editar-trabajos', component:EditarTrabajosComponent},
+  {path:'datos-idiomas' , component:DatosIdiomasComponent},
+  {path:'editar-idiomas' , component:EditarIdiomasComponent},
+  {path:'datos-hobbies' , component:DatosHobbiesComponent},
+  {path:'editar-hobbies', component:EditarHobbiesComponent},
   {path:'', redirectTo:'iniciar-sesion', pathMatch:'full'}
 ];
 

@@ -23,6 +23,10 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { GrillaCComponent } from './componentes/grilla-c/grilla-c.component';
 import { DatosTrabajosComponent } from './componentes/datos-trabajos/datos-trabajos.component';
 import { EditarTrabajosComponent } from './componentes/editar-trabajos/editar-trabajos.component';
+import { DatosIdiomasComponent } from './componentes/datos-idiomas/datos-idiomas.component';
+import { EditarIdiomasComponent } from './componentes/editar-idiomas/editar-idiomas.component';
+import { DatosHobbiesComponent } from './componentes/datos-hobbies/datos-hobbies.component';
+import { EditarHobbiesComponent } from './componentes/editar-hobbies/editar-hobbies.component';
 const routes: Routes = [
   {path:'portfolio', component:PortfolioComponent},
   {path:'iniciar-sesion', component:IniciarSesionComponent},
@@ -34,6 +38,10 @@ const routes: Routes = [
   {path:'nav-bar-editar', component:NavbarEditarComponent},
   {path:'datos-trabajos', component:DatosTrabajosComponent},
   {path:'editar-trabajos', component:EditarTrabajosComponent},
+  {path:'datos-idiomas' , component:DatosIdiomasComponent},
+  {path:'editar-idiomas' , component:EditarIdiomasComponent},
+  {path:'datos-hobbies', component:DatosHobbiesComponent},
+  {path:'editar-hobbies', component:EditarHobbiesComponent},
   {path:'', redirectTo:'iniciar-sesion', pathMatch:'full'}
 ];
 
@@ -50,7 +58,11 @@ const routes: Routes = [
    NavbarEditarComponent,
    GrillaCComponent,
    DatosTrabajosComponent,
-   EditarTrabajosComponent
+   EditarTrabajosComponent,
+   DatosIdiomasComponent,
+   EditarIdiomasComponent,
+   DatosHobbiesComponent,
+   EditarHobbiesComponent
    ],
   
   
@@ -65,7 +77,7 @@ const routes: Routes = [
     AngularFireModule.initializeApp(environment.firebaseConfig),
     
   ],
-  providers: [PersonaService, EstudiosService],
+//  providers: [PersonaService, EstudiosService],
 //{ provide: HTTP_INTERCEPTORS, userClass: InterceptorService, multi:true}],
   bootstrap: [AppComponent]
 })

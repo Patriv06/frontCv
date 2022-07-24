@@ -38,13 +38,13 @@ public traerTrabajos(){
 public modifTrabajos(tra:Trabajos){
     console.log(tra);
     console.log("Estoy en modificar trabajos");
-    this.trabajoServicio.modificarTrabajos(tra).subscribe(dato=>{this.trab= dato})
+    this.trabajoServicio.modificarTrabajos(tra).subscribe(dato=>{tra= dato})
     
     
   }
 
   public delTrabajos(trabajos:Trabajos):void{
-    this.trabajoServicio.borrarTrabajos(trabajos).subscribe(dato=>{this.trab= dato});
+    this.trabajoServicio.borrarTrabajos(trabajos).subscribe(dato=>{trabajos= dato});
   
    
  
@@ -54,7 +54,7 @@ public modifTrabajos(tra:Trabajos){
  public altaTrabajos(tra:Trabajos){
   console.log(tra);
   console.log("Estoy en alta trabajos");
-  this.trabajoServicio.crearTrabajos(tra).subscribe((dato: { id: number; nombreTrabajo: string; puestoTrabajo: string; descripcionTrabajo: string; tipoTrabajo: string; redesTrabajo:string; fechainicTrabajo: Date; fechafinTrabajo: Date; }) =>{this.trab= dato});
+  this.trabajoServicio.crearTrabajos(tra).subscribe((dato: { id: number; nombreTrabajo: string; puestoTrabajo: string; descripcionTrabajo: string; tipoTrabajo: string; redesTrabajo:string; fechainicTrabajo: Date; fechafinTrabajo: Date; }) =>{tra= dato});
   
 }
 recargar(): void {

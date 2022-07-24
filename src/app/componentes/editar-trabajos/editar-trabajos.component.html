@@ -31,12 +31,12 @@
     <div class= "container-sm table-dark">
   <h5>
     <tr *ngFor="let tra of trabaj">
-        <p>Lugar    : <input type="string" [(ngModel)]="trab.nombreTrabajo"></p>
-        <p>Tipo : <input type ="string" [(ngModel)] = "trab.tipoTrabajo "> </p>
-        <p>Puesto          :<input Type ="string" [(ngModel)]= "trab.puestoTrabajo"> </p>
-        <p>Descripción         : <input Type = "string" [(ngModel)] = "trab.descripcionTrabajo"> </p>
-        <p>Fecha de inicio: <input type="date" [(ngModel)] ="trab.fechainicTrabajo"></p>
-        <p>Fecha fin      : <input type="date" [(ngModel)] ="trab.fechafinTrabajo"></p>
+        <p>Lugar    : <input type="string" [(ngModel)]="tra.nombreTrabajo"></p>
+        <p>Tipo : <input type ="string" [(ngModel)] = "tra.tipoTrabajo "> </p>
+        <p>Puesto          :<input Type ="string" [(ngModel)]= "tra.puestoTrabajo"> </p>
+        <p>Descripción         : <input Type = "string" [(ngModel)] = "tra.descripcionTrabajo"> </p>
+        <p>Fecha de inicio: <input type="date" [(ngModel)] ="tra.fechainicTrabajo"></p>
+        <p>Fecha fin      : <input type="date" [(ngModel)] ="tra.fechafinTrabajo"></p>
          <p><button (click)="modifTrabajos(tra)"><i class="far fa-edit"title="Confirmar modificación" ></i></button>
           <button (click)="delTrabajos(tra)"  style = "margin-left: 10px;"><i class="far fa-trash-alt" title="Borrar dato académico"></i></button>
           <button (click)="recargar()" style = "margin-left: 10px;"  ><i class="far fa-eye" title="Ver modificación hecha"></i></button>

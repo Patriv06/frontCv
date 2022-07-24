@@ -19,7 +19,8 @@
            <p>Apellido : <strong>{{pers.apellido}}</strong> </p>
            <p>Teléfono :<input type="string" [(ngModel)]="pers.telefono"></p>
            <p>Mail     :<input type="string" [(ngModel)]="pers.mail"></p>
-           <p>Objetivos:<input type="textarea" [(ngModel)]="pers.objetivos"></p>
+           
+           <p>Objetivos:<input type="textarea" class="form-control w.75"[(ngModel)]="pers.objetivos"></p>
            <p>Sobre mi :<input type="textarea" [(ngModel)]="pers.sobreMi"></p>
           <p><button (click)="modifPersona(pers)"> <i class="far fa-edit"title="Confirmar modificación" ></i></button>
             <button (click)="recargar()" style = "margin-left: 10px;"  ><i class="far fa-eye" title="Ver modificación hecha"></i></button>

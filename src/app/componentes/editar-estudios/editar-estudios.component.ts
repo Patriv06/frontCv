@@ -39,12 +39,12 @@ export class EditarEstudiosComponent implements OnInit {
   public modifEstudios(est:Estudios){
       console.log(est);
       console.log("Estoy en modificar estudios");
-      this.estudiosServicio.modificarEstudios(est).subscribe(dato =>{this.est = dato});
+      this.estudiosServicio.modificarEstudios(est).subscribe(dato =>{est = dato});
       
     }
 
     public delEstudios(estudios:Estudios):void{
-     this.estudiosServicio.borrarEstudios(estudios).subscribe(dato=>{this.est = dato});
+     this.estudiosServicio.borrarEstudios(estudios).subscribe(dato=>{estudios = dato});
      
    
    
@@ -53,7 +53,7 @@ export class EditarEstudiosComponent implements OnInit {
    public altaEstudios(est:Estudios){
     console.log(est);
     console.log("Estoy en alta estudios");
-    this.estudiosServicio.crearEstudios(est).subscribe((dato: { id: number; tituloEstudios: string; institucionEstudios: string; nivelEstudios: string; redesEstudios: string; fechainicEstudios: Date; fechafinEstudios: Date; }) =>{this.est = dato});
+    this.estudiosServicio.crearEstudios(est).subscribe((dato: { id: number; tituloEstudios: string; institucionEstudios: string; nivelEstudios: string; redesEstudios: string; fechainicEstudios: Date; fechafinEstudios: Date; }) =>{est = dato});
     
     
   }

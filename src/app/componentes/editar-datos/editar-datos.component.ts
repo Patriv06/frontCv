@@ -46,7 +46,7 @@ export class EditarDatosComponent implements OnInit {
     console.log("Estoy en modificar persona")
  
     
-    this.personaServicio.modificarPersona(pers).subscribe((dato: { idPersona: number; nombre: string; apellido: string; fechaNac: number; telefono: string; mail: string; objetivos: string; sobreMi: string; }) =>{this.pers = dato})
+    this.personaServicio.modificarPersona(pers).subscribe((dato: { idPersona: number; nombre: string; apellido: string; fechaNac: number; telefono: string; mail: string; objetivos: string; sobreMi: string; }) =>{pers = dato})
 
 
   }
